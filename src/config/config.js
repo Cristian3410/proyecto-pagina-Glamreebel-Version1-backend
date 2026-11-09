@@ -1,0 +1,11 @@
+import "dotenv/config";
+export const MP_ACCESS_TOKEN = process.env.MP_ACCESS_TOKEN;
+export const MP_NOTIFICATION_URL = process.env.MP_NOTIFICATION_URL || "https://glamreebel.com/api/task/webhook";
+export const MP_WEBHOOK_SECRET = process.env.MP_WEBHOOK_SECRET;
+export const SMTP_USER = process.env.SMTP_USER;
+export const SMTP_PASS = process.env.SMTP_PASS;
+export const SMTP_HOST = process.env.SMTP_HOST || "mail.glamreebel.com";
+export const SMTP_PORT = Number(process.env.SMTP_PORT || 465);
+export const SMTP_SECURE = process.env.SMTP_SECURE !== "false";
+export const ADMIN_ORDER_EMAIL = process.env.ADMIN_ORDER_EMAIL || SMTP_USER;
+export const FRONTEND_URL = (process.env.FRONTEND_URL || "https://glamreebel.com").replace(/\/$/, "");
